@@ -36,7 +36,7 @@ class _InputPageState extends State<InputPage> {
                         selectedGender = Gender.male;
                       });
                     },
-                    colour: selectedGender == Gender.male ? cardColor : inactiveCardColor,
+                    colour: selectedGender == Gender.male ? kActiveCardColor : kInactiveCardColor,
                     cardChild: IconContent(
                       iconName: FontAwesomeIcons.mars,
                       cardText: 'MALE',
@@ -50,7 +50,7 @@ class _InputPageState extends State<InputPage> {
                         selectedGender = Gender.female;
                       });
                     },
-                    colour: selectedGender == Gender.female ? cardColor : inactiveCardColor,
+                    colour: selectedGender == Gender.female ? kActiveCardColor : kInactiveCardColor,
                     cardChild: IconContent(
                       iconName: FontAwesomeIcons.venus,
                       cardText: 'FEMALE',
@@ -62,7 +62,27 @@ class _InputPageState extends State<InputPage> {
           ),
           Expanded(
             child: ReUsableCard(
-              colour: cardColor,
+              colour: kActiveCardColor,
+              cardChild: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: <Widget>[
+                  Text(
+                    'HEIGHT',
+                    style: kLabelTextStyle,
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Text(
+                        '180',
+                        style: TextStyle(
+                          fontSize: 50.0,
+                          fontWeight: FontWeight.w900,
+                        )
+                      )
+                    ],
+                  )
+                ],
+              ),
             ),
           ),
           Expanded(
@@ -70,22 +90,22 @@ class _InputPageState extends State<InputPage> {
               children: <Widget>[
                 Expanded(
                   child: ReUsableCard(
-                    colour: cardColor,
+                    colour: kActiveCardColor,
                   ),
                 ),
                 Expanded(
                   child: ReUsableCard(
-                    colour: cardColor,
+                    colour: kActiveCardColor,
                   ),
                 ),
               ],
             ),
           ),
           Container(
-            color: bottomContainerColor,
+            color: kBottomContainerColor,
             margin: EdgeInsets.only(top: 10.0),
             width: double.infinity,
-            height: bottomContainerHeight,
+            height: kBottomContainerHeight,
           ),
         ],
       ),

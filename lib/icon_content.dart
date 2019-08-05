@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-
-const labelTextStyle = TextStyle(
-  fontSize: 18.0,
-  color: Color(0xFF8D8E98),
-);
+import 'bmi_constants.dart';
 
 class IconContent extends StatelessWidget {
 
@@ -27,7 +23,7 @@ class IconContent extends StatelessWidget {
         ),
         Text(
             cardText,
-            style: labelTextStyle,
+            style: kLabelTextStyle,
         )
       ],
     );
