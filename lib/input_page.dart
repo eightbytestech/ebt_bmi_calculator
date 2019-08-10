@@ -135,9 +135,6 @@ class _InputPageState extends State<InputPage> {
                           _weight.toString(),
                           style: kNumberTextStyle,
                         ),
-                        SizedBox(
-                          height: 20.0,
-                        ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
@@ -179,9 +176,6 @@ class _InputPageState extends State<InputPage> {
                         Text(
                           _age.toString(),
                           style: kNumberTextStyle,
-                        ),
-                        SizedBox(
-                          height: 20.0,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -240,8 +234,8 @@ class RoundIconButton extends StatelessWidget {
       onPressed: onPressed,
       elevation: 6.0,
       constraints: BoxConstraints.tightFor(
-        width: 56.0,
-        height: 56.0,
+        width: 46.0,
+        height: 46.0,
       ),
       //shape: CircleBorder(),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
